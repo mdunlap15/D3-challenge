@@ -146,9 +146,9 @@ d3.csv("/assets/data/acs_data.csv").then(function(acs_data, err) {
     .attr("fill", "blue")
     .attr("opacity", ".5");
 
-  // Create group for two x-axis labels
+  // Create group for three x-axis labels
   var labelsGroup = chartGroup.append("g")
-    .attr("transform", `translate(${width / 2}, ${height + 20})`);
+    .attr("transform", `translate(${width / 2}, ${height + 10})`);
 
   var povertyLabel = labelsGroup.append("text")
     .attr("x", 0)
@@ -166,7 +166,7 @@ d3.csv("/assets/data/acs_data.csv").then(function(acs_data, err) {
 
   var incomeLabel = labelsGroup.append("text")
     .attr("x", 0)
-    .attr("y", 40)
+    .attr("y", 60)
     .attr("value", "income") // value to grab for event listener
     .classed("inactive", true)
     .text("Household Income (Median)");
